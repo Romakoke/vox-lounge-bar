@@ -3,95 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VOX Lounge Bar, Shymkent. VIP кабинкалар, караоке, танцпол, банкет залы, меню және бронь." />
   <title>VOX Lounge Bar | Shymkent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="header">
-  <div class="logo">VOX</div>
-  <nav>
+<header class="header" id="header">
+  <a class="logo" href="#top">VOX</a>
+
+  <button class="menu-toggle" id="menuToggle">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav" id="nav">
     <a href="#about">Біз туралы</a>
+    <a href="#features">Артықшылықтар</a>
     <a href="#menu">Меню</a>
     <a href="#gallery">Галерея</a>
     <a href="#contact">Байланыс</a>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="overlay"></div>
-  <div class="hero-content">
-    <p class="tag">Shymkent • Lounge • Karaoke • VIP</p>
-    <h1>VOX Lounge Bar</h1>
-    <p>8 VIP кабинка, жалпы зал, би алаңы, сапалы дыбыс және дәмді ас.</p>
-    <div class="buttons">
-      <a href="https://wa.me/77000000000" class="btn">Бронь жасау</a>
-      <a href="#menu" class="btn ghost">Меню көру</a>
+<main id="top">
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="tag">Shymkent • Resto Bar • Karaoke • VIP</p>
+      <h1>VOX Lounge Bar</h1>
+      <p class="hero-text">Достармен демалуға, караоке айтуға, би алаңында көңіл көтеруге және банкет өткізуге арналған стильді lounge bar.</p>
+
+      <div class="hero-stats">
+        <div><b>8</b><span>VIP кабинка</span></div>
+        <div><b>70</b><span>адамға дейін банкет</span></div>
+        <div><b>100%</b><span>атмосфера</span></div>
+      </div>
+
+      <div class="buttons">
+        <a href="https://wa.me/77476440714?text=Сәлеметсіз бе! VOX Lounge Bar-ға бронь жасағым келеді." target="_blank" class="btn">WhatsApp бронь</a>
+        <a href="#menu" class="btn ghost">Меню көру</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="about" class="section">
-  <h2>VOX туралы</h2>
-  <div class="cards">
-    <div class="card">🎤 8 VIP кабинка</div>
-    <div class="card">🪩 Танцпол</div>
-    <div class="card">🔊 Сапалы дыбыс</div>
-    <div class="card">🍽 Дәмді кухня</div>
-    <div class="card">🎉 70 адамға дейін банкет</div>
-    <div class="card">✨ Күн сайын тегін кабинкалар</div>
-  </div>
-</section>
+  <section id="about" class="section about-section">
+    <p class="eyebrow">VOX Lounge Bar</p>
+    <h2>Кешке арналған дайын атмосфера</h2>
+    <p class="section-text">VIP кабинкалар, жалпы зал, сапалы дыбыс, танцпол және дәмді кухня.</p>
 
-<section class="vip">
-  <div>
-    <h2>VIP кабинкалар</h2>
-    <p>
-      Достармен, туған күнмен немесе ерекше кешпен келуге ыңғайлы жеке кабинкалар.
-      Атмосфера бар, музыка бар, қалғанын адамдар өздері қиындатып алады.
-    </p>
-  </div>
-  <img src="assets/vip.png" alt="VIP room">
-</section>
+    <div class="cards">
+      <div class="card"><span>🎤</span><h3>Караоке</h3><p>Достармен ән айтып, жеке атмосферада демалуға болады.</p></div>
+      <div class="card"><span>🛋️</span><h3>8 VIP кабинка</h3><p>Туған күн, кездесу, шағын кештерге ыңғайлы жеке бөлмелер.</p></div>
+      <div class="card"><span>🪩</span><h3>Танцпол</h3><p>Музыка, жарық, қозғалыс.</p></div>
+      <div class="card"><span>🔊</span><h3>Сапалы дыбыс</h3><p>Караоке мен кешке арналған күшті акустика.</p></div>
+      <div class="card"><span>🍽️</span><h3>Кухня</h3><p>Салаттар, ыстық тағамдар, стейк, пицца, закускалар.</p></div>
+      <div class="card"><span>🎉</span><h3>Банкет</h3><p>70 адамға дейін банкет ұйымдастыруға мүмкіндік бар.</p></div>
+    </div>
+  </section>
 
-<section id="menu" class="section dark">
-  <h2>Меню</h2>
-  <p class="sub">VOX Lounge Bar менюінен таңдаулы тағамдар мен сусындар</p>
+  <section id="features" class="vip split-section">
+    <div class="split-content">
+      <p class="eyebrow">Private rooms</p>
+      <h2>VIP кабинкалар</h2>
+      <p>Жеке кабинкада туған күн, достармен кездесу немесе шағын кеш өткізуге болады.</p>
+      <a href="https://wa.me/77476440714?text=Сәлеметсіз бе! VIP кабинка бронь жасағым келеді." target="_blank" class="text-link">VIP кабинка броньдау →</a>
+    </div>
+    <img src="assets/vip.png" alt="VOX Lounge Bar VIP кабинкасы" loading="lazy">
+  </section>
 
-  <div class="menu-grid">
-    <img src="assets/menu2.png" alt="Menu 1">
-    <img src="assets/menu3.png" alt="Menu 2">
-    <img src="assets/menu4.png" alt="Menu 3">
-        <img src="assets/menu1.png" alt="Menu 4">
+  <section id="menu" class="section dark">
+    <p class="eyebrow">Food & drinks</p>
+    <h2>Меню</h2>
+    <p class="sub">Фото меню және оқуға ыңғайлы текст меню.</p>
 
-  </div>
-</section>
+    <div class="menu-tabs">
+      <button class="tab active" data-filter="all">Барлығы</button>
+      <button class="tab" data-filter="food">Тағамдар</button>
+      <button class="tab" data-filter="drinks">Сусындар</button>
+      <button class="tab" data-filter="hookah">Кальян</button>
+    </div>
 
-<section id="gallery" class="section">
-  <h2>Галерея</h2>
-  <div class="gallery">
-    <img src="assets/gallery1.png" alt="">
-        <img src="assets/gallery2.png" alt="">
+    <div class="menu-list">
+      <article class="menu-card" data-category="food"><h3>Холодные закуски</h3><p>Мясная нарезка</p><b>7 000 ₸</b><p>Соленья</p><b>4 500 ₸</b><p>Фруктовое ассорти</p><b>8 000 ₸</b></article>
+      <article class="menu-card" data-category="food"><h3>Салаты</h3><p>Греческий</p><b>2 000 ₸</b><p>Цезарь с курицей</p><b>3 000 ₸</b><p>Оливье</p><b>2 500 ₸</b></article>
+      <article class="menu-card" data-category="food"><h3>Вторые блюда</h3><p>Телятинка с овощами</p><b>3 500 ₸</b><p>Курица с грибами</p><b>3 500 ₸</b><p>Жареная рыба</p><b>4 500 ₸</b></article>
+      <article class="menu-card" data-category="food"><h3>Стейки / Пицца</h3><p>Рибай</p><b>7 000 ₸</b><p>Пепперони</p><b>3 500 ₸</b><p>Филадельфия ролл</p><b>3 500 ₸</b></article>
+      <article class="menu-card" data-category="food"><h3>Шашлыки</h3><p>Кусковой говядина</p><b>1 600 ₸</b><p>Люля кебаб</p><b>1 500 ₸</b><p>Утка</p><b>2 000 ₸</b></article>
+      <article class="menu-card" data-category="drinks"><h3>Лимонады</h3><p>Тропический</p><b>2 500 ₸</b><p>Мохито классический</p><b>2 500 ₸</b><p>Клубника-банан</p><b>2 500 ₸</b></article>
+      <article class="menu-card" data-category="drinks"><h3>Безалкогольные</h3><p>Coca-Cola / Fanta / Sprite</p><b>1 000 ₸</b><p>Red Bull</p><b>2 000 ₸</b><p>Минеральная вода</p><b>1 200 ₸</b></article>
+      <article class="menu-card" data-category="drinks"><h3>Алкоголь</h3><p>Виски / Коньяк / Водка</p><b>от 2 000 ₸</b><p>Текила / Джин / Ром</p><b>от 2 000 ₸</b><p>Вина</p><b>от 3 000 ₸</b></article>
+      <article class="menu-card" data-category="hookah"><h3>Кальян</h3><p>Классический</p><b>7 000 ₸</b><p>Фруктовый</p><b>8 000 ₸</b><p>Премиум микс</p><b>10 000 ₸</b></article>
+    </div>
 
-    <img src="assets/vip.png" alt="">
-    <img src="assets/hero.png" alt="">
-  </div>
-</section>
+    <h3 class="photo-title">Фото меню</h3>
+    <div class="menu-grid">
+      <a href="assets/menu2.png" target="_blank"><img src="assets/menu2.png" alt="VOX меню тағамдар"></a>
+      <a href="assets/menu3.png" target="_blank"><img src="assets/menu3.png" alt="VOX меню сусындар"></a>
+      <a href="assets/menu4.png" target="_blank"><img src="assets/menu4.png" alt="VOX меню вина"></a>
+      <a href="assets/menu1.png" target="_blank"><img src="assets/menu1.png" alt="VOX толық меню"></a>
+    </div>
+  </section>
 
-<section id="contact" class="contact">
-  <h2>Байланыс</h2>
-  <p>📍 Шымкент қаласы</p>
+  <section id="gallery" class="section gallery-section">
+    <p class="eyebrow">Interior</p>
+    <h2>Галерея</h2>
+    <div class="gallery">
+      <img src="assets/gallery1.png" alt="VOX жалпы зал">
+      <img src="assets/gallery2.png" alt="VOX lounge интерьер">
+      <img src="assets/vip.png" alt="VOX VIP room">
+      <img src="assets/hero.png" alt="VOX сыртқы көрініс">
+    </div>
+  </section>
 
-  <div class="contact-buttons">
-    <a href="https://2gis.kz/shymkent/geo/70000001100353879" target="_blank">2GIS арқылы көру</a>
-    <a href="https://www.instagram.com/vox_lounge_bar/" target="_blank">Instagram</a>
-    <a href="https://wa.me/77000000000" target="_blank">WhatsApp бронь</a>
-  </div>
-</section>
+  <section id="contact" class="contact">
+    <p class="eyebrow">Reserve</p>
+    <h2>Байланыс және бронь</h2>
+    <p>📍 Шымкент қаласы • VOX Lounge Bar</p>
+    <div class="contact-buttons">
+      <a href="https://2gis.kz/shymkent/geo/70000001100353879" target="_blank">2GIS карта</a>
+      <a href="https://www.instagram.com/vox_lounge_bar/" target="_blank">Instagram</a>
+      <a href="https://wa.me/77053071428?text=Сәлеметсіз бе! VOX Lounge Bar-ға бронь жасағым келеді." target="_blank">WhatsApp бронь</a>
+    </div>
+  </section>
+</main>
 
 <footer>
-  <p>© 2026 VOX Lounge Bar. Барлық құқықтар қорғалған.</p>
+  <p>© 2026 VOX Lounge Bar • Shymkent</p>
 </footer>
 
 <script src="script.js"></script>
