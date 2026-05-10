@@ -14,7 +14,9 @@
   box-sizing: border-box;
 }
 
-html { scroll-behavior: smooth; }
+html { 
+  scroll-behavior: smooth; 
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -105,7 +107,13 @@ img {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("assets/vox-bg.png") center/cover no-repeat;
+  background-image:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.56)),
+    url("assets/vox-bg.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.03);
 }
 
 .hero::after {
@@ -114,7 +122,7 @@ img {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(0,0,0,.88), rgba(0,0,0,.56), rgba(0,0,0,.18)),
+    linear-gradient(90deg, rgba(0,0,0,.86), rgba(0,0,0,.54), rgba(0,0,0,.15)),
     linear-gradient(0deg, var(--bg), transparent 34%);
 }
 
@@ -354,6 +362,7 @@ img {
   height: 320px;
   object-fit: cover;
   transition: 0.5s ease;
+  will-change: transform;
 }
 
 .gallery-item:hover img {
@@ -571,10 +580,14 @@ img {
     border-radius: 24px;
   }
 
+  .gallery-grid {
+    gap: 12px;
+  }
+
   .gallery-item.big img,
   .gallery-item.wide img,
   .gallery-item img {
-    height: 280px;
+    height: 220px;
   }
 
   .card {
