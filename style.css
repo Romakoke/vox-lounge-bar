@@ -105,7 +105,7 @@ img {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("assets/vox-bg.jpg") center/cover no-repeat;
+  background: url("assets/vox-bg.png") center/cover no-repeat;
 }
 
 .hero::after {
