@@ -1,15 +1,15 @@
 const header = document.getElementById('header');
 const menuToggle = document.getElementById('menuToggle');
 const nav = document.getElementById('nav');
-const sections = document.querySelectorAll('.section, .vip, .contact');
-const tabs = document.querySelectorAll('.tab');
-const menuCards = document.querySelectorAll('.menu-card');
+
+const revealItems = document.querySelectorAll('.section, .split-section, .contact, .gallery-section');
+const navLinks = document.querySelectorAll('.nav a[href^="#"]');
 
 menuToggle.addEventListener('click', () => {
   nav.classList.toggle('open');
 });
 
-nav.querySelectorAll('a').forEach(link => {
+document.querySelectorAll('.nav a').forEach(link => {
   link.addEventListener('click', () => {
     nav.classList.remove('open');
   });
@@ -29,23 +29,27 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.15
 });
 
-sections.forEach(section => {
-  section.classList.add('reveal');
-  observer.observe(section);
+revealItems.forEach(item => {
+  item.classList.add('reveal');
+  observer.observe(item);
 });
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(item => item.classList.remove('active'));
-    tab.classList.add('active');
+window.addEventListener('scroll', () => {
+  let current = '';
 
-    const filter = tab.dataset.filter;
+  document.querySelectorAll('section[id]').forEach(section => {
+    const sectionTop = section.offsetTop;
 
-    menuCards.forEach(card => {
-      card.classList.toggle(
-        'hide',
-        filter !== 'all' && card.dataset.category !== filter
-      );
-    });
+    if (window.scrollY >= sectionTop - 160) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
   });
 });
